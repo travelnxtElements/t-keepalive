@@ -44,8 +44,8 @@
 		},
 
 		setupTimer: function(){
-			if(this.apiUrl && !this._timer){
-				this._timer = setInterval(function(){
+			if(this.apiUrl && !this.timer){
+				this.timer = setInterval(function(){
 					this.$.ajaxComp.generateRequest();
 				}.bind(this), this.apiInterval);
 			}
